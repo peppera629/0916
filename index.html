@@ -5,13 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mick Wang | Personal Page</title>
-    <meta name="description"
-        content="Personal webpage of Mick Wang featuring dynamic time display and modern interactive design.">
-    <!-- Google Fonts -->
+    <meta name="description" content="Personal webpage of Mick Wang - Computer Science student.">
+    <!-- Google Fonts: Noto Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap"
         rel="stylesheet">
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -19,87 +18,90 @@
 </head>
 
 <body>
-    <!-- Background Animated Blobs -->
-    <div class="background-blobs">
-        <div class="blob blob-1"></div>
-        <div class="blob blob-2"></div>
-        <div class="blob blob-3"></div>
-    </div>
-
-    <main class="page-container">
-        <!-- Main Card -->
-        <div class="profile-card">
-            <!-- Header section -->
-            <div class="profile-header">
-                <div class="avatar-wrapper">
-                    <div class="avatar-ring"></div>
-                    <div class="avatar">XD</div>
-                </div>
-                <div class="header-text">
-                    <h1 class="name">Mick Wang</h1>
-                    <p class="subtitle">哥們 你怎麼找到這個的</p>
-                    <div class="status-badge">
-                        <span class="status-dot"></span>
-                        <span class="status-text">Available & Online</span>
-                    </div>
-                </div>
+    <main class="container">
+        <!-- Profile Header -->
+        <header class="header">
+            <div class="avatar-container">
+                <div class="avatar">MW</div>
             </div>
-
-            <!-- Live Clock Card -->
-            <div class="clock-card">
-                <div class="clock-header">
-                    <i class="fa-regular fa-clock clock-icon"></i>
-                    <span class="clock-label">Current Time</span>
-                    <span class="timezone-tag" id="timezone">UTC+08:00</span>
-                </div>
-
-                <div class="clock-display">
-                    <span id="time-hours">10</span>:<span id="time-minutes">18</span>:<span id="time-seconds">16</span>
-                    <span id="time-ampm" class="ampm">AM</span>
-                </div>
-
-                <div class="date-display" id="date-text">
-                    Wednesday, September 16, 2026
-                </div>
-
-                <div class="clock-footer">
-                    <div class="live-indicator">
-                        <span class="pulse-dot"></span>
-                        <span>Live Local Time</span>
-                    </div>
-                </div>
+            <div class="header-info">
+                <h1 class="name">Mick Wang</h1>
+                <p class="subtitle">Computer Science</p>
             </div>
+        </header>
 
-            <!-- Bio / Info Grid -->
-            <div class="info-grid">
-                <div class="info-card">
-                    <div class="info-icon"><i class="fa-solid fa-user-astronaut"></i></div>
-                    <div class="info-content">
-                        <h3>About Me</h3>
-                        <p>??????????????</p>
-                    </div>
-                </div>
+        <!-- About Section -->
+        <section class="section about-section">
+            <h2 class="section-title">About Me</h2>
+            <p class="intro-text">Problem-solving-oriented student, likes writing code...? Anyway, welcome!</p>
+        </section>
 
-                <div class="info-card">
-                    <div class="info-icon"><i class="fa-solid fa-globe"></i></div>
-                    <div class="info-content">
-                        <h3>Location & Time</h3>
-                        <p id="location-text">Local Time Zone (UTC+08:00)</p>
-                    </div>
-                </div>
+        <!-- Live Clock Section -->
+        <section class="section clock-section">
+            <div class="clock-header">
+                <span class="clock-title"><i class="fa-regular fa-clock"></i> Current Time</span>
+                <span class="timezone-tag" id="timezone">UTC+08:00</span>
             </div>
-
-            <!-- Action buttons / Footer -->
-            <div class="card-footer">
-                <button class="btn btn-primary" id="btn-copy-time">
-                    <i class="fa-regular fa-copy"></i> Copy Current Time
+            <div class="clock-display">
+                <span id="time-hours">10</span>:<span id="time-minutes">18</span>:<span id="time-seconds">16</span>
+                <span id="time-ampm" class="ampm">AM</span>
+            </div>
+            <div class="date-display" id="date-text">Wednesday, September 16, 2026</div>
+            <div class="clock-actions">
+                <button class="btn-copy" id="btn-copy-time">
+                    <i class="fa-regular fa-copy"></i> Copy Time
                 </button>
                 <div class="toast" id="toast">Copied to clipboard!</div>
             </div>
-        </div>
+        </section>
 
-        <footer class="page-footer">
-            <p>&copy; <span id="year">2026</span> Mick Wang. All rights reserved.</p>
+        <!-- Skills Section -->
+        <section class="section skills-section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-brands fa-python skill-icon"></i>
+                    <span>Python</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-chart-line skill-icon"></i>
+                    <span>Data Analysis</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-brain skill-icon"></i>
+                    <span>Machine Learning</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="section projects-section">
+            <h2 class="section-title">Projects</h2>
+            <div class="project-card">
+                <div class="project-header">
+                    <h3 class="project-title">Spam SMS Detection</h3>
+                    <span class="badge-tech">Python</span>
+                </div>
+                <p class="project-desc">
+                    Spam E-mail classification using natural language processing. Joint project with 2 other groupmates
+                    back in college:
+                    <a href="https://github.com/harper025" target="_blank" rel="noopener"
+                        class="link-user">harper025</a> and
+                    <a href="https://github.com/NalaPai" target="_blank" rel="noopener" class="link-user">NalaPai</a> on
+                    GitHub.
+                </p>
+                <div class="project-footer">
+                    <a href="https://github.com/2024111304/CPFinalProject" target="_blank" rel="noopener"
+                        class="btn-github">
+                        <i class="fa-brands fa-github"></i> View Repository
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; <span id="year">2026</span> Mick Wang. Built with simplicity.</p>
         </footer>
     </main>
 
