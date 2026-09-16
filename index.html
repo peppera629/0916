@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mick Wang | Personal Page</title>
+    <meta name="description"
+        content="Personal webpage of Mick Wang featuring dynamic time display and modern interactive design.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Background Animated Blobs -->
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <main class="page-container">
+        <!-- Main Card -->
+        <div class="profile-card">
+            <!-- Header section -->
+            <div class="profile-header">
+                <div class="avatar-wrapper">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar">XD</div>
+                </div>
+                <div class="header-text">
+                    <h1 class="name">Mick Wang</h1>
+                    <p class="subtitle">哥們 你怎麼找到這個的</p>
+                    <div class="status-badge">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available & Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Clock Card -->
+            <div class="clock-card">
+                <div class="clock-header">
+                    <i class="fa-regular fa-clock clock-icon"></i>
+                    <span class="clock-label">Current Time</span>
+                    <span class="timezone-tag" id="timezone">UTC+08:00</span>
+                </div>
+
+                <div class="clock-display">
+                    <span id="time-hours">10</span>:<span id="time-minutes">18</span>:<span id="time-seconds">16</span>
+                    <span id="time-ampm" class="ampm">AM</span>
+                </div>
+
+                <div class="date-display" id="date-text">
+                    Wednesday, September 16, 2026
+                </div>
+
+                <div class="clock-footer">
+                    <div class="live-indicator">
+                        <span class="pulse-dot"></span>
+                        <span>Live Local Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio / Info Grid -->
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-user-astronaut"></i></div>
+                    <div class="info-content">
+                        <h3>About Me</h3>
+                        <p>??????????????</p>
+                    </div>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon"><i class="fa-solid fa-globe"></i></div>
+                    <div class="info-content">
+                        <h3>Location & Time</h3>
+                        <p id="location-text">Local Time Zone (UTC+08:00)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action buttons / Footer -->
+            <div class="card-footer">
+                <button class="btn btn-primary" id="btn-copy-time">
+                    <i class="fa-regular fa-copy"></i> Copy Current Time
+                </button>
+                <div class="toast" id="toast">Copied to clipboard!</div>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; <span id="year">2026</span> Mick Wang. All rights reserved.</p>
+        </footer>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
